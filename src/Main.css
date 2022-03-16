@@ -10,8 +10,8 @@
     --red-room: #9f0000;
     --light-brown-lang: #211500;
     --dark-brown-lang: #1b1500;
-    --dark-gray-type: #4f4f4f;
-    --light-gray-type: #554f4f;
+    --light-gray-type: #4f4f4f;
+    --dark-gray-type: #554f4f;
     --dark-gray-input: #2e2e2e;
     --black: #020202;
     --container-dark-red: #1D0000;
@@ -25,4 +25,8 @@
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+}
+
+html{
+    font-size: 16px;
 }

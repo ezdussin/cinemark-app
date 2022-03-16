@@ -1,0 +1,38 @@
+.account-container{
+    color: var(--white);
+    padding-top: 96px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.account-block{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    width: 20rem;
+    background-color: var(--dark-gray);
+    border-radius: 20px;
+}
+
+.account-block span{
+    margin: .5rem 0;
+}
+
+.account-block button{
+    cursor: pointer;
+    background: var(--dark-gray-input);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    margin: .5rem auto;
+    padding: .5rem 1rem;
+    transition: all 0.2s;
+}
+
+.account-block button:hover{
+    background: var(--login-dark-red);
+    transform: scale(1.05);
+}
+

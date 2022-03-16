@@ -1,6 +1,6 @@
 .tickets-menu-container{
     background: linear-gradient(var(--dark-red), var(--black));
-    padding: .5rem 8%;
+    padding: 2rem 8%;
 }
 
 .trailer-container h3{
@@ -17,7 +17,6 @@
 }
 
 /* Tickets Container */
-
 .tickets-container{
     margin: 4rem 0;
 }
@@ -30,7 +29,6 @@
 }
 
 /* State */
-
 .state-container{
     padding: .5rem;
 }
@@ -45,7 +43,6 @@
 }
 
 /* Configs Container */
-
 .configs-container{
     display: flex;
     flex-direction: row;
@@ -58,11 +55,11 @@
 }
 
 /* Day Container */
-
 .day-container li{
     margin: auto;
     color: var(--white);
     border-radius: 15px;
+    transition: all 0.2s;
 }
 
 .day-container li:hover{
@@ -83,7 +80,6 @@
 }
 
 /* Day Container Defaults */
-
 .default-list{
     background-color: var(--dark-gray);
     border: 4px solid transparent;
@@ -99,7 +95,6 @@
 }
 
 /* Sessions Container */
-
 .sessions-container{
     display: grid;
     gap: 2rem;
@@ -107,7 +102,6 @@
 }
 
 /* City Container */
-
 .city-container{
     padding: 0 1rem;
     margin: 1rem 0;
@@ -121,7 +115,6 @@
 }
 
 /* Rooms Container - Left Side */
-
 .room-block{
     border-radius: 15px;
     box-shadow: 20px 20px 40px black;
@@ -160,6 +153,7 @@
 }
 
 .room-row button{
+    cursor: pointer;
     border: 2px solid var(--white);
     border-radius: 15px;
     background: transparent;
@@ -167,11 +161,11 @@
     margin: auto 1rem;
     font-size: 1.3rem;
     color: var(--white);
+    transition: all 0.2s;
 }
 
 .room-row button:hover{
     transform: scale(0.9);
-    cursor: pointer;
 }
 
 .room-row .border-type{
@@ -192,7 +186,6 @@
 }
 
 /* Room Block - Border Radius */
-
 .top-room-block{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -204,14 +197,12 @@
 }
 
 /* Rooms Container - Right Side */
-
 .side-container img{
     width: 100%;
     box-shadow: 20px 20px 40px black;
 }
 
 /* Room Default Colors */
-
 .div-dark{
     background-color: var(--dark-gray);
 }

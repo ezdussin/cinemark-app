@@ -1,22 +1,35 @@
+/* header{
+    display: flex !important;
+    position: static !important;
+    background: transparent !important;
+    justify-content: center !important;
+} 
+
+header .navbar{
+    display: none !important;
+} */
+
 .register-container{
     background: linear-gradient(var(--dark-red), var(--black) 40%);
     display: flex;
     justify-content: left;
-    padding-top: 96px;
 }
 
 /* Register Block */
-
-.register-block{
+.register-page-block{
     display: grid;
-    padding: 2rem;
+    gap: 2vw;
+    padding: 0 4rem;
+    margin: 2rem 0;
     width: 100%;
     grid-template-columns: 50fr 50fr;
+    padding-top: 96px;
 }
 
 .register-container h3{
     color: var(--white);
     font-size: 1.5rem;
+    font-weight: 900;
     margin: 1rem 0;
     letter-spacing: .1rem;
 }
@@ -27,7 +40,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    margin: 2rem 4rem;
+    margin: 2rem;
     border-radius: 15px;
     height: auto;
 }
@@ -54,10 +67,11 @@
   -moz-appearance: textfield;
 }
 
-.register-block .default-input{
+.register-page-block .default-input{
     border-radius: 5px;
     padding: .5rem;
     margin: 1rem 0;
+    font-weight: 900;
     letter-spacing: .1rem;
     color: var(--white);
     width: 100%;
@@ -67,12 +81,11 @@ select.default-input option{
     background: var(--dark-gray);
 }
 
-.register-block .default-input:focus{
+.register-page-block .default-input:focus{
     outline: none;
 }
 
 /* Default Input Backgrounds */
-
 .input-dark{
     background: transparent;
     border: 1px solid var(--dark-gray-input);
@@ -84,13 +97,13 @@ select.default-input option{
 }
 
 /* Submit Container */
-
 .submit-container{
     display: flex;
     justify-content: right;
 }
 
 .submit-container input[type='submit']{
+    cursor: pointer;
     border-radius: 5px;
     background: var(--dark-gray-input);
     padding: .5rem 2rem;
@@ -98,14 +111,101 @@ select.default-input option{
     letter-spacing: .1rem;
     border: 1px solid transparent;
     color: var(--white);
+    font-weight: 900;
+    transition: all 0.2s;
+}
+
+.submit-container input[type='submit']:hover{
+    background: var(--login-dark-red);
+    transform: scale(1.05);
 }
 
 /* Checkbox Container */
-
 .checkbox-container label{
     display: flex;
     margin: auto 0;
     font-size: .6rem;
     color: var(--white);
     padding: 0 .5rem;
+}
+
+.checkbox-container label,
+.checkbox-container input[type='checkbox']{
+    cursor: pointer;
+}
+
+/* Featuring Container */
+.featuring{
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+}
+
+.register-poster-container-title{
+    background: var(--dark-red);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.register-poster-container h4{
+    color: var(--white);
+    letter-spacing: .1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 900;
+    padding: .5rem;
+    text-align: center;
+}
+
+.featuring-carousel-img{
+    position: relative;
+    margin: auto;
+}
+
+.register-poster-container img{
+    width: 37vw;
+    height: 20vw;
+    object-fit: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.side-featuring-buttons{
+    display: flex;
+}
+
+.featuring-buttons-block{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.featuring-btn{
+    height: 3rem;
+    margin: .25rem .5rem;
+    width: .5rem;
+    padding: .2rem;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.featuring-btn:not(active){
+    background: var(--white);
+}
+
+.featuring-buttons-block span{
+    cursor: pointer;
+}
+
+#active{
+    background: var(--dark-red);
+}
+
+@media only screen and (max-width: 1024px){
+    .register-page-block{
+        grid-template-columns: 100fr;
+        width: 10vw;
+        height: 8vw;
+        gap: 2vw;
+    }
 }

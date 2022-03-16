@@ -1,10 +1,10 @@
 import React from 'react'
 import '../css/Banner.css'
 
-export default function Banner() {
+export default function Banner({bannerURL}) {
   return (
     <div className='banner'>
-        <img src="https://i.imgur.com/PAMOWpF.png" alt="Movie banner"></img>
+        <img src={bannerURL} alt="Movie banner"></img>
     </div>
   )
 }

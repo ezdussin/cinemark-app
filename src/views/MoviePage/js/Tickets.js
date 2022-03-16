@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/Tickets.css'
 
-export default function Tickets() {
+export default function Tickets({trailerURL}) {
   return (
     <div className='tickets-menu-container'>
         <div className='trailer-container'>
@@ -9,7 +9,7 @@ export default function Tickets() {
             <div className='trailer'>
               <iframe width="640" 
               height="385" 
-              src="https://www.youtube.com/embed/X23XCFgdh2M" 
+              src={trailerURL}
               title="YouTube video player" 
               frameBorder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

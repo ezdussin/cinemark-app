@@ -54,6 +54,9 @@ header a{
     display: flex;
     color: var(--white);
     text-decoration: none;
+}
+
+.navbar-container{
     margin: auto;
 }
 
@@ -65,10 +68,15 @@ header a{
     text-align: center;
 }
 
-.navbar img{
+.navbar-left img,
+.navbar-container img{
     filter: invert(99%) sepia(0%) saturate(5239%) hue-rotate(306deg) brightness(116%) contrast(80%);
     display: flex;
     margin: auto;
     width: 2rem;
     height: 2rem;
+}
+ 
+.account-navbar-block{
+    display: none;
 }

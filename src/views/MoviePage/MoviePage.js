@@ -1,19 +1,40 @@
-import React from 'react'
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useParams } from 'react-router-dom'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 import Banner from "./js/Banner"
 import Title from "./js/Title"
-import Details from "./js/Details"
 import Tickets from './js/Tickets'
 
 export default function MoviePage() {
-    const [movieTitle] = useState('Doutor Estranho no Multiverso da Loucura')
-  
+  const {id} = useParams()
+  const db = firebase.firestore()
+  const [movie, setMovie] = useState([])
+
+  useEffect(() => {
+    db.collection('movies').doc(id).get()
+    .then(m => {
+      setMovie(m.data())
+    })
+    .catch(err => {
+      console.error(err)
+    })
+  }, [db, id])
+
     return (
       <>
-      <Banner/>
-      <Title movieTitle={movieTitle} key={movieTitle}/>
-      <Details/>
-      <Tickets/>
+      <Banner bannerURL={movie.bannerURL}/>
+      <Title 
+      movieTitle={movie.title} 
+      posterURL={movie.posterURL} 
+      length={movie.length} 
+      genres={movie.genres}
+      cast={movie.cast} 
+      director={movie.director} 
+      distribuitor={movie.distribuitor} 
+      synopsis={movie.synopsis}
+      />
+      <Tickets trailerURL={movie.trailerURL}/>
       </>
     )
   }
