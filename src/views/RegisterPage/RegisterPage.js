@@ -98,8 +98,10 @@ export default function RegisterPage() {
             btns[i].id = btns[i].id.replace("active", "");
         }
 
-        imgs[imgIndex-1].style.display = "block";  
-        btns[imgIndex-1].id = "active";
+        if(imgs && btns){
+            imgs[imgIndex-1].style.display = "block";  
+            btns[imgIndex-1].id = "active";
+        }
     }
   return ( 
     <div className='register-container'>
@@ -114,13 +116,13 @@ export default function RegisterPage() {
                 </div>
                 <div className='register-flex-2-col gender-birthday-container'>
                     <select className='default-input input-light' id='gender' name='gender' defaultValue='' required>
-                        <option disabled={true} value="">GENDER</option>
+                        <option disabled={true} value="">GÊNERO</option>
                         <option value="masculine">Masculino</option>
                         <option value="feminine">Feminino</option>
                         <option value="non-binary">Não-binário</option>
                         <option value="other">Outro</option>
                     </select>
-                    <input className='default-input input-light' max='9999-99-99' name='birthday' placeholder="DATA DE NASCIMENTO" id='birthday' type="text" onFocus={dateOnFocus} onBlur={dateOnBlur} required></input>
+                    <input className='default-input input-light' max='31-12-2022' name='birthday' placeholder="DATA DE NASCIMENTO" id='birthday' type="text" onFocus={dateOnFocus} onBlur={dateOnBlur} required></input>
                 </div>
                 <div className='register-flex-2-col state-city-container'>
                     <select className='default-input input-dark' id='state' name='state' defaultValue='state' required>

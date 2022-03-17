@@ -29,18 +29,18 @@ header{
     padding: 0 6%;
 }
 
-header .navbar{
+header .navbar-right{
     display: grid;
     grid-template-columns: 50fr 50fr;
+    gap: 2rem;
 }
 
-header .navbar-right{
-    gap: 2rem;
+header .navbar-left{
+    display: flex;
 }
 
 header h1{
     color: var(--white);
-    font-family: 'cinemark';
     padding: .5rem;
     margin: auto;
     text-align: center;
@@ -51,6 +51,7 @@ header h1{
 
 /* Link */
 header a{
+    font-family: 'cinemark';
     display: flex;
     color: var(--white);
     text-decoration: none;
@@ -68,15 +69,64 @@ header a{
     text-align: center;
 }
 
+.navbar-left a,
+.navbar-container a{
+    display: flex;
+    margin: auto;
+}
+
 .navbar-left img,
 .navbar-container img{
     filter: invert(99%) sepia(0%) saturate(5239%) hue-rotate(306deg) brightness(116%) contrast(80%);
     display: flex;
-    margin: auto;
     width: 2rem;
     height: 2rem;
 }
  
 .account-navbar-block{
     display: none;
+}
+
+@media only screen and (max-width: 1024px){
+    header{
+        display: flex;
+        padding: 0;
+        gap: 4rem;
+    }
+
+    header h1{
+        margin: auto 0;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    header .navbar-left{
+        display: flex;
+    }
+    
+    .navbar span{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    header{
+        height: 56px;
+        gap: .5rem;
+    }
+    
+    header a{
+        font-size: 1.25rem;
+        letter-spacing: .3rem;
+    }
+
+    header .navbar-right{
+        gap: 1rem;
+    }
+
+    .navbar-left img,
+    .navbar-container img{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
 }

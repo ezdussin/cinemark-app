@@ -32,7 +32,7 @@ export default function Header() {
         <div className="navbar navbar-left">
           <Link to="/movies/batman" id="menu-button"><img src={process.env.PUBLIC_URL + "/img/menu.svg"} alt="Menu button"></img></Link>
         </div>
-        <Link to="/"><h1>CINEMARK</h1></Link>
+        <h1><Link to="/">CINEMARK</Link></h1>
         <div className="navbar navbar-right">
           <div className="navbar-container search-navbar">
             <Link to="/"><img src={process.env.PUBLIC_URL + "/img/search.svg"} alt="Search Button"></img><span>Busca</span></Link>

@@ -7,7 +7,7 @@ const db = firebase.firestore()
 // Set Movies
 db.collection('movies').doc('batman').set({
   title: 'Batman',
-  bannerURL: 'https://i.imgur.com/FGagskP.jpg',
+  bannerURL: 'https://i.imgur.com/6e0zWZE.jpg',
   posterURL: 'https://i.imgur.com/kichELC.jpg',
   genres: ['AÇÃO'],
   length: 176,

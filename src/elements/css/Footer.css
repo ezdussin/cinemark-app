@@ -55,13 +55,13 @@ footer .register-notification button:hover{
     display: flex;
     justify-content: center;
     padding: 1rem;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .social-medias img{
     filter: invert(99%) sepia(0%) saturate(5239%) hue-rotate(306deg) brightness(116%) contrast(80%);
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .social-media-block{
@@ -84,7 +84,8 @@ footer .register-notification button:hover{
 }
 
 .about-us{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     margin-bottom: 4rem;
 }
@@ -109,16 +110,13 @@ footer .register-notification button:hover{
     gap: 1rem;
 }
 
-.logo-container span
+.logo-container span,
 .logo-container a{
-    margin: auto;
-    font-size: .8rem;
+    font-size: 1rem;
     padding: 0 .5rem;
     display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  border: 3px solid green; 
+    justify-content: center;
+    align-items: center;
 }
 
 .logo h3{
@@ -134,4 +132,63 @@ footer .register-notification button:hover{
     justify-content: center;
     padding: 0 .5rem;
     font-size: .5rem;
+}
+
+@media only screen and (max-width: 1024px){
+    .social-media-span{
+        display: none;
+    }
+
+    .social-media-block{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    footer .register-notification h3{
+        font-size: 1rem;
+    }
+    
+    footer .register-notification button{
+        font-size: .5rem;
+        margin: .5rem;
+        padding: .5rem 1rem;
+    }
+    
+    .logo-container span,
+    .logo-container a{
+        font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .logo-container span,
+    .logo-container a{
+        font-size: .5rem;
+    }
+    
+    .about-us{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .social-media-block img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    footer .register-notification h3{
+        font-size: .7rem;
+    }
+    
+    footer .register-notification button{
+        font-size: .5rem;
+        margin: .5rem;
+        padding: .5rem 1rem;
+    }
+    
+    .logo-container{
+        display: grid;
+    }
 }
