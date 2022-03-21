@@ -10,7 +10,6 @@
 }
 
 .trailer-container .trailer{
-    padding: 1rem;
     display: flex;
     margin: auto;
     justify-content: center;
@@ -75,8 +74,13 @@
 }
 
 .day-container{
+    overflow: auto;
     margin: 1rem 0;
     padding: .5rem 0;
+}
+
+.day-container::-webkit-scrollbar{
+    display: none;
 }
 
 /* Day Container Defaults */
@@ -132,6 +136,10 @@
     display: flex;
 }
 
+.row-right{
+    gap: 1rem;
+}
+
 .room-row-side .row-right span{
     border: 2px solid var(--white);
     border-radius: 15px;
@@ -178,7 +186,7 @@
     border: 2px solid transparent;
     border-radius: 15px;
     padding: .5rem 1rem;
-    margin: auto 1rem;
+    margin: auto 0;
     font-size: 1.25rem;
     text-align: center;
     min-width: 5rem;
@@ -237,4 +245,68 @@
 
 .lang-type-dark{
     background: var(--dark-brown-lang);
+}
+
+@media only screen and (max-width: 1024px){
+    .sessions-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    .room-row .row-left span:not(.room-state){
+        font-size: 1.2rem;
+    }
+
+    .room-row button{
+        font-size: 1rem;
+    }
+
+    .row-right span{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .room-row{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .room-row-side{
+        display: flex;
+        flex-direction: column;
+    }    
+
+    .room-row button{
+        margin: 0;
+    }
+
+    .room-row .room-state{
+        height: .7rem;
+        width: 100%;
+    }
+
+    .room-row .row-left span:not(.room-state){
+        text-align: center;
+    }
+
+    .row-right{
+        gap: 0;
+    }
+
+    .city-container h4{
+        text-align: center;
+    }
+
+    .room-row-side span,
+    .room-row-side button{
+        margin: .5rem 0;
+    }
+
+    .room-row-side .room-state span{
+        margin-bottom: 1rem;
+    }
 }

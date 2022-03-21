@@ -27,6 +27,7 @@ export default function MoviePage() {
       <Title 
       movieTitle={movie.title} 
       posterURL={movie.posterURL} 
+      ar={movie.ar}
       length={movie.length} 
       genres={movie.genres}
       cast={movie.cast} 

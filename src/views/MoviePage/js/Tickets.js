@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/Tickets.css'
 
 export default function Tickets({trailerURL}) {
+    const [daysList, setDaysList] = useState([])
+    
+    useEffect(() => {
+        setDaysList(document.getElementsByClassName('days-list'))
+        for(let i; i < daysList.length; i++){
+            console.log(daysList.item(i).id)
+        }
+    }, [])
+    
   return (
     <div className='tickets-menu-container'>
         <div className='trailer-container'>
@@ -27,14 +36,14 @@ export default function Tickets({trailerURL}) {
             </div>
             <div className='day-container default-list'>
                 <ul>
-                    <li><a id='selected' href='#'>HOJE</a></li>
-                    <li><a href='#'>AMANHÃ</a></li>
-                    <li><a href='#'>26/02</a></li>
-                    <li><a href='#'>27/02</a></li>
-                    <li><a href='#'>28/02</a></li>
-                    <li><a href='#'>01/03</a></li>
-                    <li><a href='#'>02/03</a></li>
-                    <li><a href='#'>03/03</a></li>
+                    <li><a id='selected' className='days-list' href='#'>HOJE</a></li>
+                    <li><a className='days-list' href='#'>AMANHÃ</a></li>
+                    <li><a className='days-list' href='#'>26/02</a></li>
+                    <li><a className='days-list' href='#'>27/02</a></li>
+                    <li><a className='days-list' href='#'>28/02</a></li>
+                    <li><a className='days-list' href='#'>01/03</a></li>
+                    <li><a className='days-list' href='#'>02/03</a></li>
+                    <li><a className='days-list' href='#'>03/03</a></li>
                 </ul>
             </div>
             <div className='sessions-container'>
@@ -195,7 +204,7 @@ export default function Tickets({trailerURL}) {
                     </div>
                 </div>
                 <div className='side-container'>
-                    <img src='https://i.imgur.com/LweWoF7.jpg'></img>
+                    <img src='https://i.imgur.com/LweWoF7.jpg' alt='Adds'></img>
                 </div>
             </div>
         </div>

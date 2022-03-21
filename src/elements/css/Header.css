@@ -111,12 +111,12 @@ header a{
 
 @media only screen and (max-width: 767px){
     header{
-        height: 56px;
+        height: 66px;
         gap: .5rem;
     }
     
     header a{
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         letter-spacing: .3rem;
     }
 
@@ -126,7 +126,7 @@ header a{
 
     .navbar-left img,
     .navbar-container img{
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }

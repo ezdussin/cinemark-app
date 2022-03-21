@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/Title.css'
 
-export default function Title({movieTitle, posterURL, length, genres, cast, director, distribuitor, synopsis}) {
+export default function Title({movieTitle, posterURL, ar, length, genres, cast, director, distribuitor, synopsis}) {
   return (
     <div className='container'>
         <div className='one'>
@@ -14,8 +14,8 @@ export default function Title({movieTitle, posterURL, length, genres, cast, dire
                 <div className="title">
                     <h2>{movieTitle}</h2>
                     <div className="title-bottom">
-                        <img className="bottom" src={process.env.PUBLIC_URL + "/img/ar12.svg"} alt="Advisory Rating"></img>
-                        <span className="border-text bottom">{length} MIN</span>
+                        <img className="bottom" src={process.env.PUBLIC_URL + "/img/ar"+ar+".svg"} alt="Advisory Rating"></img>
+                        <span className="border-text bottom">{length + ' MIN'}</span>
                         <span className="border-text bottom">{genres}</span>
                     </div>
                 </div>

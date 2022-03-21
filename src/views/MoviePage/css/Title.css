@@ -7,9 +7,9 @@
     background: linear-gradient(var(--dark-red), #000000);
     content:"";
     width: 100%;
-    height: 56%;
+    height: 63%;
     position: absolute;
-    top: 43%; left: 0; right: 0; bottom: 0;
+    top: 37.2%; left: 0; right: 0; bottom: 0;
     z-index: -1;
 }
 
@@ -42,16 +42,7 @@
 
 /* Title */
 .title-container{
-    position: relative;
-}
-
-.title{
-    position: absolute;
-    margin: auto;
-    padding: 0 20px;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    display: flex;
 }
 
 .title-container h2{
@@ -59,6 +50,14 @@
     font-size: 3.5rem;
     text-shadow: 0 6px 6px #000000;
     margin: 1rem 0;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .title-bottom{
@@ -103,16 +102,93 @@
 
 .about img{
     filter: invert(99%) sepia(0%) saturate(5239%) hue-rotate(306deg) brightness(116%) contrast(80%);
-    width: 2vw;
+    width: 3rem;
 }
 
 .synopsis{
     padding: 0.5rem 1rem;
     margin-bottom: 4rem;
+    height: 300px;
 }
 
 .text{
     font-size: 1.5rem;
     padding: 1rem;
     color: var(--white);
+}
+
+@media only screen and (max-width: 1440px){
+    .one{
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .container{
+        position: static;
+    }
+    
+    .title-container h2{
+        font-size: 2rem;
+    }
+    
+    .one{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one h3{
+        font-size: 1.5rem;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .title,
+    .details{
+        padding: 0;
+    }
+
+    .text{
+        font-size: 1rem;
+    }  
+
+    .about span{
+        font-size: .8rem;
+    }
+
+    .title-bottom{
+        padding: .5rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-bottom img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .title-bottom .border-text{
+        font-size: 1rem;
+        padding: .8rem 2.5vw;
+    }
+
+    .title-bottom .border-text,
+    .title-bottom img{
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .synopsis{
+        height: auto;
+    }
+
+    .poster img{
+        width: 30vw;
+    }
 }

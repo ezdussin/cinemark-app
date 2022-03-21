@@ -1,5 +1,5 @@
 .banner{
-    height: 23vw;
+    height: 22rem;
 }
 
 .banner img{
@@ -8,4 +8,15 @@
     overflow: hidden;
     position: absolute;
     padding-top: 96px;
+}
+
+@media only screen and (max-width: 767px){
+    .banner{
+        height: 50vw;
+    }
+    
+    .banner img{
+        position: static;
+        padding-top: 66px;
+    }
 }

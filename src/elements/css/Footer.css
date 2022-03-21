@@ -84,8 +84,7 @@ footer .register-notification button:hover{
 }
 
 .about-us{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
     justify-content: center;
     margin-bottom: 4rem;
 }
@@ -145,16 +144,6 @@ footer .register-notification button:hover{
 }
 
 @media only screen and (max-width: 1023px){
-    footer .register-notification h3{
-        font-size: 1rem;
-    }
-    
-    footer .register-notification button{
-        font-size: .5rem;
-        margin: .5rem;
-        padding: .5rem 1rem;
-    }
-    
     .logo-container span,
     .logo-container a{
         font-size: .8rem;
@@ -167,7 +156,18 @@ footer .register-notification button:hover{
         font-size: .5rem;
     }
     
+    footer .register-notification h3{
+        font-size: 1.2rem;
+    }
+    
+    footer .register-notification button{
+        font-size: 1rem;
+        margin: .5rem;
+        padding: .5rem 1.5rem;
+    }
+
     .about-us{
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -183,7 +183,7 @@ footer .register-notification button:hover{
     }
     
     footer .register-notification button{
-        font-size: .5rem;
+        font-size: .7rem;
         margin: .5rem;
         padding: .5rem 1rem;
     }

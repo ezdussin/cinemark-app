@@ -13,17 +13,17 @@ header .navbar{
     background: linear-gradient(var(--dark-red), var(--black) 40%);
     display: flex;
     justify-content: left;
+    padding-top: 96px;
 }
 
 /* Register Block */
 .register-page-block{
     display: grid;
     gap: 2vw;
-    padding: 0 4rem;
+    padding: 0 2%;
     margin: 2rem 0;
     width: 100%;
     grid-template-columns: 50fr 50fr;
-    padding-top: 96px;
 }
 
 .register-container h3{
@@ -157,14 +157,9 @@ select.default-input option{
     text-align: center;
 }
 
-.featuring-carousel-img{
-    position: relative;
-    margin: auto;
-}
-
 .register-poster-container img{
     width: 37vw;
-    height: 20vw;
+    height: auto;
     object-fit: cover;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -202,10 +197,33 @@ select.default-input option{
 }
 
 @media only screen and (max-width: 1024px){
+    .register-container{
+        padding-top: 66px;
+    }
+    
     .register-page-block{
-        grid-template-columns: 100fr;
-        width: 10vw;
-        height: 8vw;
-        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .register-poster-container img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .register-container form{
+        margin: 0;
+    }
+
+    .register-flex-2-col{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .submit-container{
+        justify-content: center;
     }
 }

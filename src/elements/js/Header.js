@@ -16,6 +16,7 @@ export default function Header() {
       if(user){
         db.collection('users').doc(user.uid).get()
         .then(userData => {
+          console.log(userData.data())
           setUserNickname(userData.data().nickname)
         })
         document.getElementById('login_div').style.display = 'none'
@@ -30,7 +31,7 @@ export default function Header() {
   return (
     <header>
         <div className="navbar navbar-left">
-          <Link to="/movies/batman" id="menu-button"><img src={process.env.PUBLIC_URL + "/img/menu.svg"} alt="Menu button"></img></Link>
+          <Link to="/" id="menu-button"><img src={process.env.PUBLIC_URL + "/img/menu.svg"} alt="Menu button"></img></Link>
         </div>
         <h1><Link to="/">CINEMARK</Link></h1>
         <div className="navbar navbar-right">
