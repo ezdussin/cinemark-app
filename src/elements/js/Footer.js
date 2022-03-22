@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
       <div className='register-notification'>
         <h3>Receba a Programação por e-mail</h3>
-        <Link to="/register"><button>CADASTRE-SE</button></Link>
+        <Link to="/register">CADASTRE-SE</Link>
       </div>
       <div className='footer-container'>
         <div className='social-medias'>
@@ -85,7 +85,7 @@ export default function Footer() {
           <div className='about-us-cols col-6'>
             <ul>CONTATO</ul>
             <li><Link to='/'>CENTRAL DE ATENDIMENTO</Link></li>
-            <li><Link to='/'>TRABALHE</Link></li>   
+            <li><Link to='/'>TRABALHE CONOSCO</Link></li>   
           </div>
         </div>
         <hr></hr>

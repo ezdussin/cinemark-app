@@ -3,12 +3,18 @@ import React from 'react'
 import './LoginPage.css'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
+    const navigate = useNavigate()
+    
     const auth = firebase.auth()
 
     const login = (e) => {
         e.preventDefault()
+
+        // Style
+        const warningBlock = document.getElementById('login-warning-block')
 
         // Auth
         const email = document.getElementById('email')
@@ -16,16 +22,19 @@ export default function LoginPage() {
 
         auth.signInWithEmailAndPassword(email.value, password.value)
         .then(model => {
-            alert('Logado com successo!')
+            navigate('/account', {replace: true})
         })
         .catch(err => {
-            alert('Usuário não existe!')
+            warningBlock.style.display = 'block'
         })
     }
   return (
     <div className='login-container'>
         <div className='login-block'>
             <form onSubmit={login} id='form'>
+                <div className='login-warning-block' id='login-warning-block'>
+                    <span>&#9888; Email ou senha incorreto</span>
+                </div>
                 <div className='form-block username-block'>
                     <div className='username-block-text'>
                         <span>Email</span>

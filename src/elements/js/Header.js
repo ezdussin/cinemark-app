@@ -16,7 +16,6 @@ export default function Header() {
       if(user){
         db.collection('users').doc(user.uid).get()
         .then(userData => {
-          console.log(userData.data())
           setUserNickname(userData.data().nickname)
         })
         document.getElementById('login_div').style.display = 'none'

@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import './db/firebase'
+import HomePage from "./views/HomePage/HomePage"
 import MoviePage from "./views/MoviePage/MoviePage"
 import LoginPage from "./views/LoginPage/LoginPage"
 import RegisterPage from "./views/RegisterPage/RegisterPage"
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
+        <Route path="/" element={<HomePage/>}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/register" element={<RegisterPage/>}/>
         <Route path="/movies/:id" element={<MoviePage/>}/>

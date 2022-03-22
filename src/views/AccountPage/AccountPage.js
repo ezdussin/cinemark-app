@@ -3,8 +3,11 @@ import './AccountPage.css'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
+import { useNavigate } from 'react-router-dom'
 
 export default function AccountPage() {
+    const navigate = useNavigate()
+  
     const [user, setUser] = useState([])
     const auth = firebase.auth()
     const db = firebase.firestore()
@@ -17,7 +20,7 @@ export default function AccountPage() {
                   setUser({...userData.data(), email: currentUser.email})
                 })
             } else{
-                alert("You're not logged!")
+                navigate('/login', {replace: true})
             }   
         })
     }, [auth, db])

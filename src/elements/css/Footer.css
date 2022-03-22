@@ -2,16 +2,6 @@ footer{
     color: var(--white);
 }
 
-footer a{
-    color: var(--white);
-    text-decoration: none;
-}
-
-footer a:hover{
-    color: var(--login-dark-red);
-    transform: scale(0.98);
-}
-
 footer .register-notification{
     color: var(--white);
     display: flex;
@@ -25,8 +15,9 @@ footer .register-notification h3{
     padding: .5rem;
 }
 
-footer .register-notification button{
+footer .register-notification a{
     cursor: pointer;
+    text-decoration: none;
     background: transparent;
     font-size: 1.5rem;
     margin: 2rem .5rem;
@@ -37,8 +28,8 @@ footer .register-notification button{
     transition: all 0.2s;
 }
 
-footer .register-notification button:hover{
-    transform: scale(0.98);
+footer .register-notification a:hover{
+    transform: scale(0.95);
 }
 
 .footer-container{
@@ -87,6 +78,18 @@ footer .register-notification button:hover{
     display: flex;
     justify-content: center;
     margin-bottom: 4rem;
+}
+
+.about-us a,
+.logo-container a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.about-us a:hover,
+.logo-container a:hover{
+    color: var(--login-dark-red);
+    transform: scale(0.98);
 }
 
 .about-us ul{
@@ -160,7 +163,7 @@ footer .register-notification button:hover{
         font-size: 1.2rem;
     }
     
-    footer .register-notification button{
+    footer .register-notification a{
         font-size: 1rem;
         margin: .5rem;
         padding: .5rem 1.5rem;
@@ -169,6 +172,7 @@ footer .register-notification button:hover{
     .about-us{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        text-align: center;
     }
 
     .social-media-block img{
@@ -182,7 +186,7 @@ footer .register-notification button:hover{
         font-size: .7rem;
     }
     
-    footer .register-notification button{
+    footer .register-notification a{
         font-size: .7rem;
         margin: .5rem;
         padding: .5rem 1rem;

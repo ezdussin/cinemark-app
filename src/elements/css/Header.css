@@ -92,6 +92,7 @@ header a{
         display: flex;
         padding: 0;
         gap: 4rem;
+        justify-content: space-around;
     }
 
     header h1{

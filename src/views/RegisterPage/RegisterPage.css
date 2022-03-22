@@ -56,6 +56,21 @@ header .navbar{
     padding: .5rem 0;
 }
 
+/* Warning */
+.register-warning-block span{
+    color: var(--login-dark-red);
+    font-size: .8rem;
+}
+
+.register-warning-block{
+    display: none;
+    border: 2px solid var(--login-dark-red);
+    border-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
 /* Remove Side Arrows From Type Number */
 /* Chrome, Safari, Edge, Opera */
 .register-container input::-webkit-outer-spin-button,
@@ -135,19 +150,19 @@ select.default-input option{
 }
 
 /* Featuring Container */
-.featuring{
+.register-featuring{
     display: flex;
     margin: 2rem;
     justify-content: center;
 }
 
-.register-poster-container-title{
+.register-banner-container-title{
     background: var(--dark-red);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-.register-poster-container h4{
+.register-banner-container h4{
     color: var(--white);
     letter-spacing: .1rem;
     font-weight: bold;
@@ -157,7 +172,7 @@ select.default-input option{
     text-align: center;
 }
 
-.register-poster-container img{
+.register-banner-container img{
     width: 37vw;
     height: auto;
     object-fit: cover;
@@ -165,17 +180,17 @@ select.default-input option{
     border-bottom-right-radius: 15px;
 }
 
-.side-featuring-buttons{
+.register-side-featuring-buttons{
     display: flex;
 }
 
-.featuring-buttons-block{
+.register-featuring-buttons-block{
     display: flex;
     flex-direction: column;
     margin: auto;
 }
 
-.featuring-btn{
+.register-featuring-btn{
     height: 3rem;
     margin: .25rem .5rem;
     width: .5rem;
@@ -184,15 +199,15 @@ select.default-input option{
     border-radius: 15px;
 }
 
-.featuring-btn:not(active){
+.register-featuring-btn:not(active){
     background: var(--white);
 }
 
-.featuring-buttons-block span{
+.register-featuring-buttons-block span{
     cursor: pointer;
 }
 
-#active{
+#register-active-btn{
     background: var(--dark-red);
 }
 
@@ -206,7 +221,7 @@ select.default-input option{
         flex-direction: column;
     }
 
-    .register-poster-container img{
+    .register-banner-container img{
         width: 100%;
         height: auto;
     }

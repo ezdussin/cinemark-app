@@ -56,6 +56,21 @@
     cursor: pointer;
 }
 
+/* Warning */
+.login-warning-block span{
+    color: var(--login-dark-red);
+    font-size: .8rem;
+}
+
+.login-warning-block{
+    display: none;
+    border: 2px solid var(--login-dark-red);
+    border-radius: 15px;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
 /* Form */
 .form-block{
     margin: 1rem 0;
